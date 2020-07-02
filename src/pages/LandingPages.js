@@ -4,6 +4,7 @@ import Header from "parts/Header";
 import Hero from "parts/Hero";
 import MostPicked from "parts/MostPicked";
 import Categories from "parts/Categories";
+import Testimony from "parts/Testimony";
 
 import LandingPage from "json/landingPage.json";
 export default class LandingPages extends Component {
@@ -22,6 +23,7 @@ export default class LandingPages extends Component {
           data={LandingPage.mostPicked}
         />
         <Categories data={LandingPage.categories} />
+        <Testimony data={LandingPage.testimonial} />
       </>
     );
   }
