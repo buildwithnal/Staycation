@@ -25,7 +25,7 @@ export default class LandingPages extends Component {
         />
         <Categories data={LandingPage.categories} />
         <Testimony data={LandingPage.testimonial} />
-        <Footer/>
+        <Footer />
       </>
     );
   }
