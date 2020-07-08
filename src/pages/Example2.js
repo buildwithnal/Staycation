@@ -1,10 +1,14 @@
 import React, { Component } from "react";
 
-import { InputNumber } from "elements/Form";
+import { InputDate } from "elements/Form";
 
 export default class Example extends Component {
   state = {
-    value: "1",
+    value: {
+      startDate: new Date(),
+      endDate: new Date(),
+      key: "selection",
+    },
   };
 
   handleChange = (e) => {
@@ -12,7 +16,6 @@ export default class Example extends Component {
   };
 
   render() {
-    console.log(this.state.value);
     return (
       <div className="container">
         <div
@@ -20,10 +23,8 @@ export default class Example extends Component {
           style={{ height: "100vh" }}
         >
           <div className="col-auto">
-            <InputNumber
-              max={30}
-              suffix=" night"
-              isSuffixPlural
+            <InputDate
+              mac={30}
               onChange={this.handleChange}
               name="value"
               value={this.state.value}
